@@ -129,7 +129,7 @@ button:hover {
 }
 
 .light-theme .stopwatch {
-  background: #f5f5f5;     /* light grey/white background */
+  background: #f5f5f5;     /* light white background */
   color: #edd6d6;
   border: 2px solid #e3daf0; /* purple border in light mode */
 }
