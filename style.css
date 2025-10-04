@@ -1,0 +1,160 @@
+/* Center content */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", monospace;
+  background: #1e1e2f;
+  color: #fff;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.stopwatch {
+  text-align: center;
+  background: #2a2a3d;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  width: 400px;
+  max-width: 90%;
+  transition: background 0.3s ease, border 0.3s ease;
+  border: 2px solid transparent;
+}
+
+#display {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  letter-spacing: 3px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+button {
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.4s ease, transform 0.2s ease;
+}
+
+/* Active button styles */
+.start-active {
+  background: #388e3c !important;
+}
+.stop-active {
+  background: #d32f2f !important;
+}
+
+button#start {
+  background:  rgb(32, 71, 32);
+  color: white;
+}
+
+button#stop {
+  background: #d32f2f;
+  color: white;
+}
+
+button#reset {
+  background: #ff9800;
+  color: white;
+}
+
+button#lap {
+  background: #2196f3;
+  color: white;
+}
+
+button:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+
+/* Laps list */
+.laps-container {
+  margin-top: 15px;
+}
+
+#laps {
+  text-align: left;
+  max-height: 150px;
+  overflow-y: auto;
+  padding-left: 0;
+  margin-top: 10px;
+  transition: opacity 0.3s ease;
+}
+
+#laps li {
+  list-style: none;
+  padding: 5px 10px;
+  margin-bottom: 5px;
+  background: #3b3b57;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* Theme toggle button */
+.theme-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  font-size: 1.8rem;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.3s ease;
+}
+
+.theme-btn:hover {
+  transform: rotate(20deg) scale(1.2);
+}
+
+/* Light Theme box style */
+.dark-theme .stopwatch {
+  background: #1e1e1e;     /* darker when in dark mode */
+  border: 2px solid #444;  /* subtle border */
+}
+
+.light-theme .stopwatch {
+  background: #f5f5f5;     /* light grey/white background */
+  color: #edd6d6;
+  border: 2px solid #e3daf0; /* purple border in light mode */
+}
+
+/* Dark Theme */
+.dark-theme {
+  background: #e8e4e7;
+  color: #e0e0e0;
+  transition: background 0.3s ease, color 0.3s ease;
+
+}
+
+.dark-theme #display {
+  background: rgb(40, 37, 40);
+  color: #e0e0e0;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+  #display {
+    font-size: 2rem;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
